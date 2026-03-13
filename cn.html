@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="PMG: 参数化运动生成器用于类人运动控制">
+  <meta name="description" content="PRIOR：基于参考步态先验的人形机器人运动感知学习">
   <meta name="keywords" content="Robotics, Humanoids and Animaloids, Imitation Learning, Reinforcement Learning, Locomotion Control">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PMG</title>
@@ -28,10 +28,10 @@
   <link rel="shortcut icon" type="image/png" href="./static/images/THU_logo.png">
   <link rel="apple-touch-icon" href="./static/images/THU_logo.png">
 
-  <meta property="og:site_name" content="PMG: 参数化运动生成器用于类人运动控制" />
+  <meta property="og:site_name" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="PMG: 参数化运动生成器用于类人运动控制" />
-  <meta property="og:description" content="by Chenxi Han, Yuheng Min, Zihao Huang, Ao Hong, Hang Liu, Yi Cheng, Houde Liu" />
+  <meta property="og:title" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
+  <meta property="og:description" content="by Chenxi Han, Shilu He, Yi Cheng, Linqi Ye, Houde Liu" />
   <meta property="og:url" content="https://pmg-icra26.github.io/" />
   <meta property="og:image" content="https://mobile-aloha.github.io/static/images/preview.gif" />
   <meta property="og:image:secure" content="https://mobile-aloha.github.io/static/images/preview.gif" />
@@ -42,8 +42,8 @@
 
   <meta property="article:publisher" content="https://mobile-aloha.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PMG: 参数化运动生成器用于类人运动控制" />
-  <meta name="twitter:description" content="by Chenxi Han, Yuheng Min, Zihao Huang, Ao Hong, Hang Liu, Yi Cheng, Houde Liu" />
+  <meta name="twitter:title" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
+  <meta name="twitter:description" content="by Chenxi Han, Shilu He, Yi Cheng, Linqi Ye, Houde Liu" />
   <meta name="twitter:url" content="https://pmg-icra26.github.io/" />
   <meta name="twitter:image" content="https://pmg-icra26.github.io/static/images/preview.gif" />
   <meta name="twitter:site" content="@ibean___" />
@@ -64,25 +64,23 @@
       <div class="columns is-centered">
         <div class="column is-two-thirds is-centered has-text-centered">
           <!-- title -->
-          <h1 class="title is-1 publication-title" style="color: #8818ea;">PMG</h1>
+          <h1 class="title is-1 publication-title" style="color: #8818ea;">PRIOR</h1>
           <h2 class="subtitle is-2 publication-subtitle">
-            用于拟人运动控制的参数化运动生成器
+            基于参考步态先验的人形机器人运动感知学习
           </h2>
           <!-- authors -->
           <div class="is-size-4 publication-authors">
             <span class="author-block">
               <a href="https://ibean625.github.io/">韩晨曦</a>,
-              <a href="./cn.html">闵宇恒</a>,
-              <a href="./cn.html">黄梓豪</a>,
-              <a href="./cn.html">洪翱</a>,
-              <a href="https://hangliu1996.github.io/">刘航</a>,
+              <a href="https://shiluhe.github.io/">贺诗璐</a>,
               <a href="https://chengeeee.github.io/">程颐</a>,
+              <a href="https://linqi-ye.github.io/">叶林奇</a>,
               <a href="https://www.sigs.tsinghua.edu.cn/lhd_en/main.htm">刘厚德</a>
             </span>
           </div>
           <!-- conference acceptance -->
           <div style="text-align: center; margin: 15px 0; font-size: 18px; font-weight: 600; color: #e53935;">
-            已被 ICRA 2026 录用
+            投稿至 IROS 2026 
           </div>
           <!-- logo -->
           <div style="text-align: center; margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; gap: 60px;">
@@ -93,7 +91,7 @@
               <img src="./static/images/ZERITH.png" style="width: auto; height: 60px;" alt="ZERITH">
             </a>
             <a href="https://umich.edu/" target="_blank" style="text-decoration: none; display: inline-block;">
-              <img src="./static/images/UMich.png" style="width: auto; height: 60px;" alt="Umich">
+              <img src="./static/images/CQU_logo.png" style="width: auto; height: 60px;" alt="CQU">
             </a>
           </div>
           <!-- links -->
@@ -101,7 +99,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./resources/PMG.pdf"
+                <a href="./resources/PRIOR.pdf"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -121,7 +119,7 @@
               </span>
               <!-- Video link -->
               <span class="link-block">
-                <a href="./resources/PMG.mp4"
+                <a href="./resources/PRIOR.mp4"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -154,11 +152,11 @@
         <h2 class="title is-2">摘要</h2>
         <div class="content has-text-justified">
           <p>
-            近年来，数据驱动的强化学习与运动跟踪技术的进步显著提升了人形机器人的行走能力，但在实际应用中仍面临关键挑战。尤其是，尽管底层的运动跟踪与轨迹跟随控制器已较为成熟，基于全身参考轨迹引导的方法却难以适配更高层级的指令接口及多样化任务场景：此类方法通常依赖大规模高质量数据集，在不同速度与姿态区间下稳定性不足，并且对机器人个体的标定误差高度敏感。
-
-            为应对上述问题，我们提出了参数化运动生成器（Parameterized Motion Generator, PMG）。该方法基于对人类运动结构的系统分析，在实时条件下，仅依托一组紧凑的参数化运动数据与高维控制指令，即可合成全身参考轨迹。结合模仿学习训练流程以及基于优化的“仿真到现实”电机参数辨识模块，我们在自主研发的类人机器人原型 ZERITH Z1 上对完整方案进行了验证。实验结果表明，在统一的系统框架下，PMG 不仅能够生成自然、类人的行走动作，还能精确响应包括基于虚拟现实（VR）的遥操作在内的高维控制输入，并实现高效且可验证的仿真到现实迁移。
-            
-            综上所述，本研究提出并实验验证了一条通向自然化、可落地类人机器人控制的可行路径。
+              训练能够以自然步态穿越复杂地形的感知型人形机器人运动策略仍然是一个开放性挑战，通常需要多阶段训练流程、对抗性目标或大量的真实世界校准。我们提出了PRIOR，这是一个基于Isaac Lab的高效且可复现的框架，
+              它通过一个简单而有效的设计实现了以类人步态稳健地穿越地形：(i) 一个参数化步态生成器，无需对抗性训练即可提供从运动捕捉中提取的稳定参考轨迹；
+              (ii) 一个基于GRU的状态估计器，通过自监督高度图重建直接从以自我为中心的深度图像推断地形几何形状；以及(iii) 地形自适应的足迹奖励，引导足迹放置在可穿越区域。通过对深度图像分辨率权衡的系统分析，
+              我们确定了在实时约束下最大化地形保真度的配置，从而在不降低穿越性能的前提下显著降低感知开销。在包括楼梯、箱子和缝隙在内的各种复杂地形上进行的全面实验表明，每个组件都能带来互补且至关重要的性能提升，
+              整个框架实现了 100% 的穿越成功率。我们将开源完整的 PRIOR 框架，包括训练流程、参数化步态生成器和评估基准，使其成为 Isaac Lab 上人形机器人运动研究的可复现基础。
           </p>
         </div>
       </div>
