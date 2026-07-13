@@ -140,7 +140,7 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Language switch link -->
+              <!-- Language switch link (hidden for anonymous review).
               <span class="link-block">
                 <a href="./cn.html" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -149,6 +149,7 @@
                   <span>中文</span>
                 </a>
               </span>
+              -->
             </div>
           </div>
         </div>
@@ -165,16 +166,15 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-              Training perceptive humanoid locomotion policies that traverse complex terrains with natural gaits remains an open challenge, 
-              typically demanding multi-stage training pipelines, adversarial objectives, or extensive real-world calibration. We present PRIOR, 
-              an efficient and reproducible framework built on Isaac Lab that achieves robust terrain traversal with human-like gaits through a simple yet effective design: 
-              (i) a parametric gait generator that supplies stable reference trajectories derived from motion capture without adversarial training, 
-              (ii) a GRU-based state estimator that infers terrain geometry directly from egocentric depth images via self-supervised heightmap reconstruction, 
-              and (iii) terrain-adaptive footstep rewards that guide foot placement toward traversable regions. Through systematic analysis of depth image resolution trade-offs, 
-              we identify configurations that maximize terrain fidelity under real-time constraints, substantially reducing perceptual overhead without degrading traversal performance. 
-              Comprehensive experiments across terrains of varying difficulty—including stairs, boxes, and gaps—demonstrate that each component yields complementary and essential performance gains, 
-              with the full framework achieving a 100% traversal success rate. We will open-source the complete PRIOR framework, including the training pipeline, parametric gait generator, 
-              and evaluation benchmarks, to serve as a reproducible foundation for humanoid locomotion research on Isaac Lab.
+            Training perceptive humanoid locomotion policies that traverse complex terrains with natural gaits remains challenging, 
+            typically requiring multi-stage pipelines, adversarial objectives, or extensive real-world calibration. We present PRIOR, 
+            an efficient Isaac Lab framework achieving robust terrain traversal with human-like gaits through three components: 
+            (i) a parametric gait generator supplying stable reference trajectories from motion capture without adversarial training, 
+            (ii) a GRU-based state estimator inferring terrain geometry from egocentric depth images via self-supervised heightmap reconstruction, 
+            and (iii) terrain-adaptive footstep rewards guiding foot placement toward traversable regions. 
+            We analyze depth image resolution trade-offs to maximize terrain fidelity under real-time constraints, reducing perceptual overhead without degrading performance. 
+            Experiments on six terrain types demonstrate strong generalization, with the full framework achieving 83.5\% success rate 
+            and gait quality evaluations confirming improved motion naturalness from the reference gait prior. The framework will be released as open source. 
           </p>
         </div>
       </div>
