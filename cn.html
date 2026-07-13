@@ -24,33 +24,10 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
-  <link rel="icon" type="image/png" href="./static/images/THU_logo.png">
-  <link rel="shortcut icon" type="image/png" href="./static/images/THU_logo.png">
-  <link rel="apple-touch-icon" href="./static/images/THU_logo.png">
 
   <meta property="og:site_name" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
   <meta property="og:type" content="video.other" />
   <meta property="og:title" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
-  <meta property="og:description" content="by Chenxi Han, Shilu He, Yi Cheng, Linqi Ye, Houde Liu" />
-  <meta property="og:url" content="https://pmg-icra26.github.io/" />
-  <meta property="og:image" content="https://mobile-aloha.github.io/static/images/preview.gif" />
-  <meta property="og:image:secure" content="https://mobile-aloha.github.io/static/images/preview.gif" />
-  <meta property="og:video" content="" />
-  <meta property="og:video:secure" content="" />
-  <meta property="og:image:width" content="1280" />
-  <meta property="og:image:height" content="720" />
-
-  <meta property="article:publisher" content="https://mobile-aloha.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PRIOR：基于参考步态先验的人形机器人运动感知学习" />
-  <meta name="twitter:description" content="by Chenxi Han, Shilu He, Yi Cheng, Linqi Ye, Houde Liu" />
-  <meta name="twitter:url" content="https://pmg-icra26.github.io/" />
-  <meta name="twitter:image" content="https://pmg-icra26.github.io/static/images/preview.gif" />
-  <meta name="twitter:site" content="@ibean___" />
-  <meta name="twitter:card" content="player" />
-  <meta name="twitter:player" content="" />
-  <meta name="twitter:player:width" content="1280" />
-  <meta name="twitter:player:height" content="720" />
 
   <script src="https://www.youtube.com/iframe_api"></script>
 </head>
@@ -68,55 +45,9 @@
           <h2 class="subtitle is-2 publication-subtitle">
             基于参考步态先验的人形机器人运动感知学习
           </h2>
-          <!-- authors -->
-          <div class="is-size-4 publication-authors">
-            <span class="author-block">
-              <a href="https://ibean625.github.io/">韩晨曦</a>,
-              <a href="https://shiluhe.github.io/">贺诗璐</a>,
-              <a href="https://chengeeee.github.io/">程颐</a>,
-              <a href="https://linqi-ye.github.io/">叶林奇</a>,
-              <a href="https://www.sigs.tsinghua.edu.cn/lhd_en/main.htm">刘厚德</a>
-            </span>
-          </div>
-          <!-- conference acceptance -->
-          <div style="text-align: center; margin: 15px 0; font-size: 18px; font-weight: 600; color: #e53935;">
-            投稿至 IROS 2026 
-          </div>
-          <!-- logo -->
-          <div style="text-align: center; margin: 20px 0; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; gap: 60px;">
-            <a href="https://www.tsinghua.edu.cn/" target="_blank" style="text-decoration: none; display: inline-block;">
-              <img src="./static/images/THU_logo.png" style="width: auto; height: 60px;" alt="THU">
-            </a>
-            <a href="https://zerith.com/" target="_blank" style="text-decoration: none; display: inline-block;">
-              <img src="./static/images/ZERITH.png" style="width: auto; height: 60px;" alt="ZERITH">
-            </a>
-            <a href="https://umich.edu/" target="_blank" style="text-decoration: none; display: inline-block;">
-              <img src="./static/images/CQU_logo.png" style="width: auto; height: 60px;" alt="CQU">
-            </a>
-          </div>
           <!-- links -->
           <div>
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="./resources/PRIOR.pdf"
-                   class="external-link button is-normal is-rounded is-dark" target="_blank">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>论文</span>
-                </a>
-              </span>
-              <!-- arXiv Link. -->
-              <span class="link-block">
-                <a href="./index.html"
-                   class="external-link button is-normal is-rounded is-dark" target="_blank">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
               <!-- Video link -->
               <span class="link-block">
                 <a href="./resources/PRIOR.mp4"
@@ -152,11 +83,11 @@
         <h2 class="title is-2">摘要</h2>
         <div class="content has-text-justified">
           <p>
-              训练能够以自然步态穿越复杂地形的感知型人形机器人运动策略仍然是一个开放性挑战，通常需要多阶段训练流程、对抗性目标或大量的真实世界校准。我们提出了PRIOR，这是一个基于Isaac Lab的高效且可复现的框架，
-              它通过一个简单而有效的设计实现了以类人步态稳健地穿越地形：(i) 一个参数化步态生成器，无需对抗性训练即可提供从运动捕捉中提取的稳定参考轨迹；
-              (ii) 一个基于GRU的状态估计器，通过自监督高度图重建直接从以自我为中心的深度图像推断地形几何形状；以及(iii) 地形自适应的足迹奖励，引导足迹放置在可穿越区域。通过对深度图像分辨率权衡的系统分析，
-              我们确定了在实时约束下最大化地形保真度的配置，从而在不降低穿越性能的前提下显著降低感知开销。在包括楼梯、箱子和缝隙在内的各种复杂地形上进行的全面实验表明，每个组件都能带来互补且至关重要的性能提升，
-              整个框架实现了 100% 的穿越成功率。我们将开源完整的 PRIOR 框架，包括训练流程、参数化步态生成器和评估基准，使其成为 Isaac Lab 上人形机器人运动研究的可复现基础。
+            训练能够以自然步态穿越复杂地形的感知型人形机器人运动策略仍然是一项挑战，通常需要多阶段流程、对抗性目标或大量的真实世界校准。
+            我们提出了PRIOR，这是一个高效的Isaac Lab框架，它通过三个组件实现了以类人步态稳健穿越地形：（i）参数化步态生成器，无需对抗性训练即可从运动捕捉数据中提供稳定的参考轨迹；
+            （ii）基于GRU的状态估计器，通过自监督高度图重建从以自我为中心的深度图像推断地形几何形状；
+            以及（iii）地形自适应的足迹奖励，引导足迹放置在可穿越区域。我们分析了深度图像分辨率的权衡，以在实时约束下最大化地形保真度，从而在不降低性能的前提下减少感知开销。
+            在六种地形类型上的实验表明，该框架具有很强的泛化能力，完整框架的成功率达到83.5%，步态质量评估也证实了参考步态先验提高了运动的自然度。该框架将以开源形式发布。
           </p>
         </div>
       </div>
